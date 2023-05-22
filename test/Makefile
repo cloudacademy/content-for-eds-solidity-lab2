@@ -14,8 +14,8 @@ two:
 three:
 	mkdir -p contracts
 	cp ../src/contracts/Variables.sol contracts/
-	npx hardhat test
-	ls
+	npm install hardhat
+	npx hardhat test test_two.js
 
 four:
 	mkdir -p ../challenge/three/
