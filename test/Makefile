@@ -14,7 +14,8 @@ two:
 three:
 	mkdir -p contracts
 	cp ../src/contracts/Variables.sol contracts/
-	npm list
+	npm install hardhat @nomicfoundation/hardhat-toolbox solc
+	npx hardhat test test_two.js
 
 four:
 	mkdir -p ../challenge/three/
