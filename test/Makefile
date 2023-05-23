@@ -9,7 +9,6 @@ one:
 two:
 	mkdir -p contracts
 	cp ../src/contracts/Variables.sol contracts/
-	npm install
 	npx hardhat test test_two.js
 
 three:
