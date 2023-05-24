@@ -9,7 +9,6 @@ one:
 two:
 	mkdir -p contracts
 	cp ../src/contracts/Variables.sol contracts/
-	cp ../node_modules /.
 	ls
 	npx hardhat test test_two.js
 
