@@ -13,11 +13,12 @@ two:
 	npx hardhat test test_two.js
 
 three:
-	mkdir -p contracts
-	cp ../src/contracts/Variables.sol contracts/
-	npm install
-	ls
-	npx hardhat test test_two.js
+	mkdir -p ../contracts
+	cp ../src/contracts/Variables.sol ../contracts/
+	cp test_two.js ../
+	cp hardhat.config.js ../
+	pwd
+	(cd /root/lab  && npx hardhat test test_two.js)
 
 four:
 	mkdir -p ../challenge/three/
