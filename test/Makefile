@@ -9,13 +9,16 @@ one:
 two:
 	mkdir -p contracts
 	cp ../src/contracts/Variables.sol contracts/
+	cp ../node_modules /.
+	ls
 	npx hardhat test test_two.js
 
 three:
 	mkdir -p contracts
 	cp ../src/contracts/Variables.sol contracts/
-	ls -a
-	pwd
+	npm install
+	ls
+	npx hardhat test test_two.js
 
 four:
 	mkdir -p ../challenge/three/
