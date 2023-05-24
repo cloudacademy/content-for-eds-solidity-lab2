@@ -10,6 +10,9 @@ install:
 	npm install
 	ls
 
+list:
+	ls
+
 two:
 	mkdir -p contracts
 	cp ../src/contracts/Variables.sol contracts/
