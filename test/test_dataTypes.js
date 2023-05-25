@@ -23,22 +23,22 @@ describe("DataTypes", function () {
     return { contract, unlockTime, owner };
   }
 
-  describe("test if unlockTime variable  declared", function () {
-    it("is declared?", async function () {
+  describe("step 1", function () {
+    it("test if unlockTime variable  declared", async function () {
       const { contract, unlockTime } = await loadFixture(deployContract);
       expect(await contract.unlockTime()).to.equal(unlockTime);
     });
   });
 
-  describe("test if owner variable declared", function () {
-    it("is declared?", async function () {
+  describe("step 2", function () {
+    it("test if owner variable declared", async function () {
       const { contract, owner } = await loadFixture(deployContract);
       expect(await contract.owner()).to.equal(owner.address);
     });
   });
   
-  describe("test if isReady variable  declared", function () {
-    it("is declared?", async function () {
+  describe("step 3", function () {
+    it("test if isReady variable  declared", async function () {
       const { contract } = await loadFixture(deployContract);
       // expect variable isReady to be declared as true
       expect(await contract.isReady()).to.equal(true);

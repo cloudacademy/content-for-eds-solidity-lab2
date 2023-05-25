@@ -17,23 +17,23 @@ describe("Functions", function () {
     return { contract };
   }
 
-  describe("test if functionOne is declared and returns string", function () {
-    it("is declared?", async function () {
+  describe("step 1", function () {
+    it("test if functionOne is declared and returns string", async function () {
       const { contract } = await loadFixture(deployContract);
       expect(await contract.functionOne()).to.be.a("string");
     });
   });
 
-  describe("test if functionTwo is declared and it returns input param as a string", function () {
-    it("is declared?", async function () {
+  describe("step 2", function () {
+    it("test if functionTwo is declared and it returns input param as a string", async function () {
       const { contract } = await loadFixture(deployContract);
       const input = "test";
       expect(await contract.functionTwo(input)).to.equal(input);
     });
   });
 
-  describe("test if functionThree is declared and it returns input param as a string", function () {
-    it("is declared?", async function () {
+  describe("step 3", function () {
+    it("test if functionThree is declared and it returns input param as a string", async function () {
       const { contract } = await loadFixture(deployContract);
       const name = "Mark";
       const age = 30;
@@ -43,8 +43,8 @@ describe("Functions", function () {
     });
   });
 
-  describe("test if functionFour is declared and uses function modifier", function () {
-    it("is declared?", async function () {
+  describe("step 4", function () {
+    it("test if functionFour is declared and uses function modifier", async function () {
       const { contract } = await loadFixture(deployContract);
       const name = "Mark";
       const age = 30;

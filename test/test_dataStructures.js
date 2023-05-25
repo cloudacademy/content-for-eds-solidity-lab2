@@ -17,24 +17,24 @@ describe("DataStructures", function () {
     return { contract };
   }
 
-  describe("test if person is  declared", function () {
-    it("is declared?", async function () {
+  describe("step 1", function () {
+    it("test if person is  declared", async function () {
       const { contract } = await loadFixture(deployContract);
       const person = await contract.person();
       expect(person[0]).not.to.be.empty;
     });
   });
 
-  describe("test if sampleArray is  declared", function () {
-    it("is declared?", async function () {
+  describe("step 2", function () {
+    it("test if sampleArray is  declared", async function () {
       const { contract } = await loadFixture(deployContract);
       const sampleArray = await contract.sampleArray(0);
       expect(sampleArray).not.to.be.empty;
     });
   });
 
-  describe("test if currentState is declared as Enum", function () {
-    it("is declared?", async function () {
+  describe("step 3", function () {
+    it("test if currentState is declared as Enum", async function () {
       const { contract } = await loadFixture(deployContract);
       const currentState = await contract.currentState();
       expect(currentState).is.not.a('string');
@@ -42,8 +42,8 @@ describe("DataStructures", function () {
   });
 
 
-  describe("test if people map is populated", function () {
-    it("is declared?", async function () {
+  describe("step 4", function () {
+    it("test if people map is populated", async function () {
       const { contract } = await loadFixture(deployContract);
       const people = await contract.people(1);
       expect(people[0]).not.to.be.empty;

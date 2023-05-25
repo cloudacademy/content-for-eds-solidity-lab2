@@ -17,8 +17,8 @@ describe("ControlStructures", function () {
     return { contract };
   }
 
-  describe("test if functionOne has if else statement", function () {
-    it("is declared?", async function () {
+  describe("step 1", function () {
+    it("test if functionOne has if else statement", async function () {
       const { contract } = await loadFixture(deployContract);
 
       const input = 1;
@@ -29,8 +29,8 @@ describe("ControlStructures", function () {
     });
   });
 
-  describe("test if functionTwo has if else-if else statement", function () {
-    it("is declared?", async function () {
+  describe("step 2", function () {
+    it("test if functionTwo has if else-if else statement", async function () {
       const { contract } = await loadFixture(deployContract);
 
       const input = 1;
@@ -44,8 +44,8 @@ describe("ControlStructures", function () {
     });
   });
 
-  describe("test if functionThree has for loop declared and it looks for even numbers", function () {
-    it("is declared?", async function () {
+  describe("step 3", function () {
+    it("test if functionThree has for loop declared and it looks for even numbers", async function () {
       const { contract } = await loadFixture(deployContract);
 
       const input = [1,2,3,4,5,6,7];
@@ -55,8 +55,8 @@ describe("ControlStructures", function () {
     });
   });
 
-  describe("test if functionFour has while loop declared and it looks for even numbers", function () {
-    it("is declared?", async function () {
+  describe("step 4", function () {
+    it("test if functionFour has while loop declared and it looks for even numbers", async function () {
       const { contract } = await loadFixture(deployContract);
 
       const input = 12;
@@ -66,8 +66,8 @@ describe("ControlStructures", function () {
     });
   });
 
-  describe("test if functionFive has while loop declared and it looks for even numbers", function () {
-    it("is declared?", async function () {
+  describe("step 5", function () {
+    it("test if functionFive has while loop declared and it looks for even numbers", async function () {
       const { contract } = await loadFixture(deployContract);
 
       const input = 12;
@@ -77,8 +77,8 @@ describe("ControlStructures", function () {
     });
   });
 
-  describe("test if functionSix has while loop declared and it breaks when finds first 2 even numbers", function () {
-    it("is declared?", async function () {
+  describe("step 6", function () {
+    it("test if functionSix has while loop declared and it breaks when finds first 2 even numbers", async function () {
       const { contract } = await loadFixture(deployContract);
 
       const input = 12;
@@ -89,8 +89,8 @@ describe("ControlStructures", function () {
   });
 
 
-  describe("test if functionSeven has while loop declared and it skipps when finds 2", function () {
-    it("is declared?", async function () {
+  describe("step 7", function () {
+    it("test if functionSeven has while loop declared and it skipps when finds 2", async function () {
       const { contract } = await loadFixture(deployContract);
 
       const input = 12;
