@@ -5,18 +5,20 @@ pragma solidity ^0.8.9;
 // import "hardhat/console.sol";
 
 contract Variables {
-    uint public unlockTime;
-    address payable public owner;
-    string public randomString;
+    string public nameOfTheContract; // state variable
+    string public greetings; // state variable
+    string public visibleByEveryone; // state variable
 
-    constructor(uint _unlockTime) payable {
-        require(
-            block.timestamp < _unlockTime,
-            "Unlock time should be in the future"
-        );
-
-        unlockTime = _unlockTime;
-        owner = payable(msg.sender);
-        randomString = "Hello World";
+    constructor(string memory _nameOfTheContract) payable {
+        nameOfTheContract = _nameOfTheContract;
+        greetings = "Hello World";
+        visibleByEveryone = "This should be visible by everyone";
     }
+
+    function getResult() public pure returns(uint){
+      uint a = 1; // local variable
+      uint b = 2; // local variable
+      return a + b; 
+   }
+
 }
