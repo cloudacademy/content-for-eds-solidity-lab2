@@ -53,6 +53,11 @@ datastructures-four:
 	cp ../src/contracts/DataStructures.sol contracts/
 	npx hardhat test test_dataStructures.js --grep 'step 4'
 
+datastructures-five:
+	mkdir -p contracts
+	cp ../src/contracts/DataStructures.sol contracts/
+	npx hardhat test test_dataStructures.js --grep 'step 6'
+
 functions-one:
 	mkdir -p contracts
 	cp ../src/contracts/Functions.sol contracts/
