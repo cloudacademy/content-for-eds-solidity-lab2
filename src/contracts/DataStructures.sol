@@ -22,28 +22,19 @@ contract DataStructures {
 
     constructor() payable {
         
-        // Struct
-        person = Person({
-            name: "Adam",
-            age: 100,
-            height: 180,
-            senior: true
-        });
+        // Step1: Declare a variable called person of type Person (struct)
 
-        // Array
-        sampleArray = ['a', 'b', 'c'];
+        // Step2: Declare a variable called sampleArray of type string array containing 3 elements: "a", "b", "c"
 
-        // Enum
-        currentState = State.DONE;
+        // Step3: Declare a variable called currentState of type State (enum) and assign the value State.DONE to it
 
-        // Mapping
-        people[1] = person;
+        // Step4: Declare a variable called people of type mapping (mapping) that maps uint to Person
     }
 
 
-
-    function getTuple() public pure returns(int, bool){
-      return (7, true);
+    // Step5: Update a function called getTuple to return a tuple (int, bool) with the values 7 and true
+    function getTuple() public pure returns(string memory){
+        return ("Hello World");
     }
 
 }

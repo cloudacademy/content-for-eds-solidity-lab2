@@ -2,112 +2,18 @@
 pragma solidity ^0.8.9;
 
 contract ControlStructures {
+    
+    //Step1: Create a public function called functionOne() that takes an uint as input and returns a result based on the following condition: if the input is less than 10, return "someNumber is less than 10", otherwise return "someNumber is greater than 10"
 
-    function functionOne(uint someNumber) public pure returns (string memory) {
-        string memory result;
-        if (someNumber < 10) {
-         result = "someNumber is less than 10";
-        } else {
-            result =  "someNumber is greater than 10";
-        }
-        return result;
-    }
+    //Step2: Create a public function called functionTwo() that takes an uint as input and returns a result based on the following condition: if the input is less than 10, return "someNumber is less than 10", if the input is equal to 10, return "someNumber is equal to 10", otherwise return "someNumber is greater than 10"
 
-    function functionTwo(uint someNumber) public pure returns (string memory) {
-        string memory result;
-        if (someNumber < 10) {
-         result = "someNumber is less than 10";
-        } else if (someNumber == 10) {
-            result =  "someNumber is equal to 10";
-        } else {
-            result =  "someNumber is greater than 10";
-        }
-        return result;
-    }
+    //Step3: Create a public function called functionThree() that takes array of uint as input and returns the number of even numbers in that array
 
-    function functionThree(uint[] memory data) public pure returns (uint) {
-        uint sizeOfArray = data.length;
-        uint countEven = 0;
-        for (uint i = 1; i < sizeOfArray; i++) {
-            bool isEven = data[i] % 2 == 0;
-            if (isEven) {
-                countEven++;
-            }
-        }
-        return countEven;
-    }
+    //Step4: Create a public function called functionFour() that takes an uint as input and returns the number of even numbers between 1 and that number (hint use while loop)
 
-    function functionFour(uint times) public pure returns (uint) {
-        uint count = 0;
-        uint evenCount = 0;
+    //Step5: Create a public function called functionFive() that takes an uint as input and returns the number of even numbers between 1 and that number (hint use do-while loop)
 
-        while (count < times) {
-            count++;
+    //Step6: Create a public function called functionSix() that takes an uint as input and counts the number of even numbers between 1 and that number. Hoever make this function to return only first 2 even numbers. (hint use while loop and break)
 
-            bool isEven = count % 2 == 0;
-            if (isEven) {
-               evenCount++;
-            }
-        }
-        return evenCount;
-    }
-
-
-
-    function functionFive(uint times) public pure returns (uint) {
-        uint count = 0;
-        uint evenCount = 0;
-
-        do {
-            count++;
-
-            bool isEven = count % 2 == 0;
-            if (isEven) {
-               evenCount++;
-            }
-        } while (count < times);
-
-        return evenCount;
-    }
-
-    function functionSix(uint times) public pure returns (uint) {
-        uint count = 0;
-        uint evenCount = 0;
-
-        while (count < times) {
-            count++;
-
-            bool isEven = count % 2 == 0;
-            if (isEven) {
-               evenCount++;
-            }
-            // If evenCount is 2, break out of the loop
-            if(evenCount == 2) {
-                break;
-            }   
-        }
-        return evenCount;
-    }
-
-    function functionSeven(uint times) public pure returns (uint) {
-        uint count = 0;
-        uint evenCount = 0;
-
-        while (count < times) {
-            count++;
-
-            // If count is 2, skip the rest of the loop
-            if(count == 2) {
-                continue;
-            }  
-
-            bool isEven = count % 2 == 0;
-            if (isEven) {
-               evenCount++;
-            } 
-        }
-        return evenCount;
-    }
-
-
+    //Step7: Create a public function called functionSeven() that takes an uint as input and counts the number of even numbers between 1 and that number. Hoever make this function to skip the number 2. (hint use while loop and continue)
 }

@@ -8,21 +8,11 @@ contract Functions {
       _;
     }
 
-
-
-    function functionOne() public pure returns (string memory) {
-        return "Hello World";
-    } 
+    //Step1: Create a public function called functionOne() that returns a string "Hello World"
     
-    function functionTwo(string memory input) public pure returns (string memory) {
-        return input;
-    } 
+    //Step2: Create a public function called functionTwo() that takes a string as input and returns the same string
 
-    function functionThree(string memory name, uint age) public pure returns (string memory, uint) {
-        return (name, age);
-    }
+    //Step3: Create a public function called functionThree() that takes a string and an uint as input and returns a tuple (string, uint)
 
-    function functionFour(string memory name, uint age) isAdult(age) public pure returns (string memory) {
-        return string.concat("Welcome to the club", name);
-    }
+    //Step4: Create a public function called functionFour() that takes a string and an uint as input. Then it passes age to the modifier isAdult and returns a string "Welcome to the club" + name (Hint use string.concat)
 }

@@ -49,5 +49,15 @@ describe("DataStructures", function () {
       expect(people[0]).not.to.be.empty;
     });
   });
+  
+  describe("step 5", function () {
+    it("test if getTuple() function returns tuple", async function () {
+      const { contract } = await loadFixture(deployContract);
+      const result = await contract.getTuple();
+      console.log(result);
+      expect(result[0]).to.equal(7);
+      expect(result[1]).to.equal(true);
+    });
+  });
 
 });

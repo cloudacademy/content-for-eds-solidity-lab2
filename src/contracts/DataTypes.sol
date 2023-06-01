@@ -7,13 +7,10 @@ contract DataTypes {
     bool public isReady; // state variable
 
     constructor(uint _unlockTime) payable {
-        require(
-            block.timestamp < _unlockTime,
-            "Unlock time should be in the future"
-        );
+        // Step1: Assign the parameter to the variable called unlockTime
 
-        unlockTime = _unlockTime;
-        owner = payable(msg.sender);// special variable
-        isReady = true;
+        // Step2: Assign the address of the owner of the contract to the variable called owner
+
+        // Step3: Assign the boolean value true to the variable called isReady
     }
 }

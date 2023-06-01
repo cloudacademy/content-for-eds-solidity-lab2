@@ -24,21 +24,21 @@ describe("DataTypes", function () {
   }
 
   describe("step 1", function () {
-    it("test if unlockTime variable  declared", async function () {
+    it("test if unlockTime variable is declared", async function () {
       const { contract, unlockTime } = await loadFixture(deployContract);
       expect(await contract.unlockTime()).to.equal(unlockTime);
     });
   });
 
   describe("step 2", function () {
-    it("test if owner variable declared", async function () {
+    it("test if owner variable is declared", async function () {
       const { contract, owner } = await loadFixture(deployContract);
       expect(await contract.owner()).to.equal(owner.address);
     });
   });
   
   describe("step 3", function () {
-    it("test if isReady variable  declared", async function () {
+    it("test if isReady variable is declared", async function () {
       const { contract } = await loadFixture(deployContract);
       // expect variable isReady to be declared as true
       expect(await contract.isReady()).to.equal(true);

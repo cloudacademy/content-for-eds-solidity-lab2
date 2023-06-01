@@ -18,7 +18,7 @@ describe("Variables Unit Tests", function () {
   }
 
   describe("step 1", function () {
-    it("test if nameOfTheContract variable  declared", async function () {
+    it("test if nameOfTheContract variable is declared", async function () {
       const { variablesContract, nameOfTheContract } = await loadFixture(deployVariablesContract);
       expect(await variablesContract.nameOfTheContract()).to.equal(nameOfTheContract);
     });
@@ -33,7 +33,7 @@ describe("Variables Unit Tests", function () {
   });
 
   describe("step 3", function () {
-    it("test if visibleByEveryone variable  is public", async function () {
+    it("test if visibleByEveryone variable is public", async function () {
       const { variablesContract } = await loadFixture(deployVariablesContract);
       // expect variable visibleByEveryone to be public
       expect(await variablesContract.visibleByEveryone()).not.to.be.empty;
@@ -44,7 +44,7 @@ describe("Variables Unit Tests", function () {
     it("test if local variables in function getResult() are declared", async function () {
       const { variablesContract } = await loadFixture(deployVariablesContract);
       // expect variable localVariable to be declared
-      expect(await variablesContract.getResult()).not.to.be.empty;
+      expect(await variablesContract.getResult()).to.equal(3);
     });
   });
 
